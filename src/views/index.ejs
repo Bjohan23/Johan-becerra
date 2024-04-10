@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= title %></title>
     <%- include('partials/head.ejs')%>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-5QX96V46EZ");
+    </script>
   </head>
   <body>
     <%- include('partials/navigation.ejs')%>
@@ -21,5 +30,10 @@
       </div>
     </header>
     <%- include('partials/footer.ejs')%>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-5QX96V46EZ"
+    ></script>
   </body>
 </html>
