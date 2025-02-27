@@ -6,56 +6,80 @@
   <title>Proyectos - Johan Becerra</title>
   <%- include('partials/head.ejs')%>
 </head>
-<body>
+<body class="bg-gray-900 text-white">
   <%- include('partials/navigation.ejs')%>
   
-  <main class="container py-5">
-    <h1 class="text-center display-4 section-title">Mis Proyectos</h1>
+  <div class="pt-16">
+    <!-- Header -->
+    <div class="bg-gray-800 py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl font-bold">Mis Proyectos</h1>
+        <p class="mt-4 text-xl text-gray-300 max-w-2xl mx-auto">
+          Una colección de mis trabajos y experimentos en desarrollo de software
+        </p>
+      </div>
+    </div>
     
-    <div class="row g-4">
-      <!-- Proyecto 1 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="project-card">
-          <img src="https://via.placeholder.com/400x200" alt="Proyecto 1" class="project-img">
-          <div class="card-body p-4">
-            <h5 class="card-title">Aplicación NodeJS</h5>
-            <p class="card-text">Web personal desarrollada con Node.js, Express y EJS como motor de plantillas.</p>
-            <div class="mb-3">
-              <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">Express</span>
-              <span class="tech-tag">EJS</span>
+    <!-- Proyectos -->
+    <div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Proyecto 1 -->
+        <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl">
+          <img src="https://via.placeholder.com/600x300" alt="Proyecto 1" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold">Aplicación Node.js</h3>
+            <p class="mt-2 text-gray-400">Web personal desarrollada con Node.js, Express y EJS como motor de plantillas.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-blue-900/50 text-blue-400 text-xs rounded-full">Node.js</span>
+              <span class="px-2 py-1 bg-green-900/50 text-green-400 text-xs rounded-full">Express</span>
+              <span class="px-2 py-1 bg-purple-900/50 text-purple-400 text-xs rounded-full">EJS</span>
             </div>
-            <div class="d-flex justify-content-between">
-              <a href="https://aplicaci-n-de-nodejs.vercel.app/" target="_blank" class="btn btn-primary btn-sm">Demo</a>
-              <a href="https://github.com/Bjohan23/aplicaci-n-de-Nodejs-" target="_blank" class="btn btn-outline-light btn-sm">Código</a>
+            <div class="mt-6 flex justify-between">
+              <a href="#" class="text-blue-400 hover:text-blue-300 font-medium">Demo</a>
+              <a href="#" class="text-gray-400 hover:text-gray-300">Código</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Proyecto 2 -->
+        <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl">
+          <img src="https://via.placeholder.com/600x300" alt="Proyecto 2" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold">Sistema de Inventario</h3>
+            <p class="mt-2 text-gray-400">Aplicación para gestión de inventarios con Node.js y MongoDB.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-blue-900/50 text-blue-400 text-xs rounded-full">Node.js</span>
+              <span class="px-2 py-1 bg-yellow-900/50 text-yellow-400 text-xs rounded-full">MongoDB</span>
+              <span class="px-2 py-1 bg-red-900/50 text-red-400 text-xs rounded-full">Express</span>
+            </div>
+            <div class="mt-6 flex justify-between">
+              <a href="#" class="text-blue-400 hover:text-blue-300 font-medium">Demo</a>
+              <a href="#" class="text-gray-400 hover:text-gray-300">Código</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Proyecto 3 -->
+        <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl">
+          <img src="https://via.placeholder.com/600x300" alt="Proyecto 3" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold">API RESTful</h3>
+            <p class="mt-2 text-gray-400">Servicio de API RESTful para gestión de datos de usuarios y productos.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-blue-900/50 text-blue-400 text-xs rounded-full">Node.js</span>
+              <span class="px-2 py-1 bg-indigo-900/50 text-indigo-400 text-xs rounded-full">Express</span>
+              <span class="px-2 py-1 bg-green-900/50 text-green-400 text-xs rounded-full">MySQL</span>
+            </div>
+            <div class="mt-6 flex justify-between">
+              <a href="#" class="text-blue-400 hover:text-blue-300 font-medium">Demo</a>
+              <a href="#" class="text-gray-400 hover:text-gray-300">Código</a>
             </div>
           </div>
         </div>
       </div>
-      
-      <!-- Añade aquí más proyectos con el mismo formato -->
-      
     </div>
-  </main>
+  </div>
   
   <%- include('partials/footer.ejs')%>
-  <!-- Script para animaciones -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const cards = document.querySelectorAll('.project-card');
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      });
-      
-      cards.forEach(card => {
-        card.classList.add('animate-on-scroll');
-        observer.observe(card);
-      });
-    });
-  </script>
 </body>
 </html>
