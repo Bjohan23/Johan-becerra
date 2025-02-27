@@ -11,12 +11,21 @@
   
   <div class="pt-16">
     <!-- Header -->
-    <div class="bg-gray-800 py-16">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 class="text-4xl font-bold">Mis Proyectos</h1>
-        <p class="mt-4 text-xl text-gray-300 max-w-2xl mx-auto">
+    <div class="bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-green-500/10">
+      <div class="max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl font-bold" data-aos="fade-up">Mis Proyectos</h1>
+        <p class="mt-4 text-xl text-gray-300 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
           Una colección de mis trabajos y experimentos en desarrollo de software
         </p>
+      </div>
+    </div>
+    
+    <!-- Filtros (opcional) -->
+    <div class="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap justify-center gap-4" data-aos="fade-up">
+        <button class="px-4 py-2 rounded-full bg-blue-500 text-white">Todos</button>
+        <button class="px-4 py-2 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors">Backend</button>
+        <button class="px-4 py-2 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors">Frontend</button>
       </div>
     </div>
     
@@ -24,7 +33,7 @@
     <div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Proyecto 1 -->
-        <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl">
+        <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform transition-all hover:-translate-y-2 duration-300" data-aos="fade-up" data-aos-delay="100">
           <img src="https://via.placeholder.com/600x300" alt="Proyecto 1" class="w-full h-48 object-cover">
           <div class="p-6">
             <h3 class="text-xl font-bold">Aplicación Node.js</h3>
@@ -42,7 +51,7 @@
         </div>
         
         <!-- Proyecto 2 -->
-        <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl">
+        <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform transition-all hover:-translate-y-2 duration-300" data-aos="fade-up" data-aos-delay="200">
           <img src="https://via.placeholder.com/600x300" alt="Proyecto 2" class="w-full h-48 object-cover">
           <div class="p-6">
             <h3 class="text-xl font-bold">Sistema de Inventario</h3>
@@ -60,7 +69,7 @@
         </div>
         
         <!-- Proyecto 3 -->
-        <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl">
+        <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform transition-all hover:-translate-y-2 duration-300" data-aos="fade-up" data-aos-delay="300">
           <img src="https://via.placeholder.com/600x300" alt="Proyecto 3" class="w-full h-48 object-cover">
           <div class="p-6">
             <h3 class="text-xl font-bold">API RESTful</h3>
@@ -78,8 +87,66 @@
         </div>
       </div>
     </div>
+    
+    <!-- Sección "Otros proyectos" -->
+    <div class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 bg-gray-800/30 rounded-xl my-12" data-aos="fade-up">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold">Otros proyectos</h2>
+        <p class="mt-4 text-gray-400">Proyectos más pequeños en los que he trabajado</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Mini proyecto 1 -->
+        <div class="bg-gray-800 p-6 rounded-xl transition-all hover:bg-gray-700" data-aos="zoom-in" data-aos-delay="100">
+          <h3 class="text-lg font-bold">Calculadora JavaScript</h3>
+          <p class="mt-2 text-gray-400 text-sm">Una calculadora simple construida con HTML, CSS y JavaScript</p>
+          <div class="mt-4 flex justify-end">
+            <a href="#" class="text-sm text-blue-400 hover:underline">Ver detalles →</a>
+          </div>
+        </div>
+        
+        <!-- Mini proyecto 2 -->
+        <div class="bg-gray-800 p-6 rounded-xl transition-all hover:bg-gray-700" data-aos="zoom-in" data-aos-delay="200">
+          <h3 class="text-lg font-bold">Landing Page</h3>
+          <p class="mt-2 text-gray-400 text-sm">Una página de destino para un producto ficticio</p>
+          <div class="mt-4 flex justify-end">
+            <a href="#" class="text-sm text-blue-400 hover:underline">Ver detalles →</a>
+          </div>
+        </div>
+        
+        <!-- Mini proyecto 3 -->
+        <div class="bg-gray-800 p-6 rounded-xl transition-all hover:bg-gray-700" data-aos="zoom-in" data-aos-delay="300">
+          <h3 class="text-lg font-bold">To-Do List</h3>
+          <p class="mt-2 text-gray-400 text-sm">Una aplicación de lista de tareas con almacenamiento local</p>
+          <div class="mt-4 flex justify-end">
+            <a href="#" class="text-sm text-blue-400 hover:underline">Ver detalles →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Sección CTA -->
+    <div class="max-w-7xl mx-auto px-4 py-20 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+      <h2 class="text-3xl font-bold">¿Interesado en trabajar juntos?</h2>
+      <p class="mt-4 text-xl text-gray-400 max-w-2xl mx-auto">
+        Estoy abierto a nuevas oportunidades y colaboraciones en proyectos interesantes
+      </p>
+      <div class="mt-8">
+        <a href="/contact" class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors">
+          Contáctame
+        </a>
+      </div>
+    </div>
   </div>
   
   <%- include('partials/footer.ejs')%>
+  
+  <script>
+    // Inicializar AOS
+    AOS.init({
+      duration: 800,
+      once: false
+    });
+  </script>
 </body>
 </html>
