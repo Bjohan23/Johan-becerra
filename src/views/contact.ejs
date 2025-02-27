@@ -1,34 +1,128 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= title %></title>
-
-    <%- include('partials/head.ejs')%>
-  </head>
-  <body>
-    <%- include('partials/navigation.ejs')%>
-    <div class="container vh-100 d-flex justify-content-center align-items-center">
-      <div class="card">
-        <div class="card-header">
-          <h3>contactame</h3>
-      </div>
-      <div class="card-body text-start">
-        <form >
-         <div class="mb-3">
-          <label for="Correo">Correo</label>
-          <input type="email" placeholder="Ingresa tu correo electrónico"  class="form-control">
-         </div>
-         <div class="mb-3">
-          <label for="Asunto">Asunto</label>
-          <input type="text" placeholder="Ingresa el asunto"  class="form-control">
-         </div>
-         <button class="btn btn-primary btn-block">Enviar</button>
-        </form>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto - Johan Becerra</title>
+  <%- include('partials/head.ejs')%>
+</head>
+<body class="bg-gray-900 text-white">
+  <%- include('partials/navigation.ejs')%>
+  
+  <div class="pt-16">
+    <!-- Header -->
+    <div class="bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-green-500/10">
+      <div class="max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl font-bold" data-aos="fade-up">Contáctame</h1>
+        <p class="mt-4 text-xl text-gray-300 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+          ¿Tienes un proyecto en mente? ¡Hablemos sobre cómo puedo ayudarte!
+        </p>
       </div>
     </div>
-<!--     
-    <%- include('partials/footer.ejs')%> -->
-  </body>
+    
+    <!-- Contenido -->
+    <div class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <!-- Información de contacto -->
+        <div data-aos="fade-right">
+          <h2 class="text-2xl font-bold">Información de contacto</h2>
+          <p class="mt-4 text-gray-400">Estoy disponible para proyectos freelance, colaboraciones o simplemente para charlar sobre tecnología.</p>
+          
+          <div class="mt-8 space-y-6">
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-map-marker-alt text-blue-400"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-medium">Ubicación</h3>
+                <p class="text-gray-400">Chiclayo, Perú</p>
+              </div>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-envelope text-green-400"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-medium">Email</h3>
+                <a href="mailto:becerrajohan6@gmail.com" class="text-gray-400 hover:text-white">becerrajohan6@gmail.com</a>
+              </div>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-phone text-purple-400"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-medium">Teléfono</h3>
+                <a href="tel:+51998113374" class="text-gray-400 hover:text-white">+51 998 113 374</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Redes sociales -->
+          <div class="mt-12">
+            <h3 class="text-lg font-medium">Sígueme en</h3>
+            <div class="mt-4 flex space-x-4">
+              <a href="https://github.com/Bjohan23" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="#" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Formulario de contacto -->
+        <div data-aos="fade-left">
+          <div class="bg-gray-800 rounded-xl p-8 shadow-xl">
+            <h2 class="text-2xl font-bold">Envíame un mensaje</h2>
+            <p class="mt-2 text-gray-400">Completa el formulario y me pondré en contacto contigo lo antes posible.</p>
+            
+            <form action="https://formspree.io/f/tuclaveunica" method="POST" class="mt-8">
+              <div class="space-y-6">
+                <div>
+                  <label for="name" class="block text-sm font-medium text-gray-300">Nombre</label>
+                  <input type="text" id="name" name="name" required class="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white focus:border-blue-500 focus:ring-blue-500 shadow-sm">
+                </div>
+                
+                <div>
+                  <label for="email" class="block text-sm font-medium text-gray-300">Email</label>
+                  <input type="email" id="email" name="email" required class="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white focus:border-blue-500 focus:ring-blue-500 shadow-sm">
+                </div>
+                
+                <div>
+                  <label for="subject" class="block text-sm font-medium text-gray-300">Asunto</label>
+                  <input type="text" id="subject" name="subject" required class="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white focus:border-blue-500 focus:ring-blue-500 shadow-sm">
+                </div>
+                
+                <div>
+                  <label for="message" class="block text-sm font-medium text-gray-300">Mensaje</label>
+                  <textarea id="message" name="message" rows="4" required class="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white focus:border-blue-500 focus:ring-blue-500 shadow-sm"></textarea>
+                </div>
+                
+                <div>
+                  <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 focus:ring-offset-gray-800">
+                    Enviar mensaje
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <%- include('partials/footer.ejs')%>
+  
+  <script>
+    // Inicializar AOS
+    AOS.init();
+  </script>
+</body>
 </html>

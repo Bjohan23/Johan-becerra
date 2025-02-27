@@ -1,72 +1,70 @@
-<footer class="bg-dark text-light pt-5 pb-4">
-  <div class="container text-center text-md-left">
-    <div class="row text-center text-md-left">
-      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-        <h5 class="text-uppercase mb-4 font-weight-bold text-warning">
-          Contacto
-        </h5>
-        <p><i class="fas fa-home mr-3"></i> chiclayo, Perú</p>
-        <p>
-          <i class="fas fa-envelope mr-3"></i>
-          <a href="mailto:becerrajohan6@gmail.com">becerrajohan6@gmail.com</a>
+<footer class="bg-gray-800 text-gray-300">
+  <div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <!-- Logo y descripción -->
+      <div class="md:col-span-2">
+        <div class="flex items-center space-x-2">
+          <span class="text-xl font-bold bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">JB</span>
+          <span class="font-semibold">Johan Becerra</span>
+        </div>
+        <p class="mt-4 text-sm text-gray-400 max-w-md">
+          Estudiante de Ingeniería de Sistemas y desarrollador de software apasionado por crear soluciones tecnológicas innovadoras.
         </p>
-        <p>
-          <i class="fas fa-phone mr-3"></i>
-          <a href="tel:+51 998 113 374">+51 998 113 374</a>
-        </p>
-      </div>
-    </div>
-
-    <hr class="mb-4" />
-
-    <div class="row align-items-center">
-      <div class="col-md-7 col-lg-8">
-        <p>
-          Copyright ©2024 Todos los derechos reservados por:
-          <a href="#" style="text-decoration: none">
-            <strong class="text-warning">Johan</strong>
+        <div class="mt-6">
+          <a href="https://wakatime.com/@bjohan23" target="_blank" class="flex items-center space-x-2 text-gray-400 hover:text-gray-300">
+            <img src="https://wakatime.com/badge/user/bjohan23.svg" alt="WakaTime" class="h-6">
           </a>
-        </p>
-      </div>
-
-      <div class="col-md-5 col-lg-4">
-        <div class="text-center text-md-right">
-          <ul class="list-unstyled list-inline">
-            <li class="list-inline-item">
-              <a
-                href="#"
-                class="btn-floating btn-sm text-white"
-                style="font-size: 23px"
-                ><i class="fab fa-facebook"></i
-              ></a>
-            </li>
-            <li class="list-inline-item">
-              <a
-                href="#"
-                class="btn-floating btn-sm text-white"
-                style="font-size: 23px"
-                ><i class="fab fa-twitter"></i
-              ></a>
-            </li>
-            <li class="list-inline-item">
-              <a
-                href="#"
-                class="btn-floating btn-sm text-white"
-                style="font-size: 23px"
-                ><i class="fab fa-google-plus"></i
-              ></a>
-            </li>
-            <li class="list-inline-item">
-              <a
-                href="#"
-                class="btn-floating btn-sm text-white"
-                style="font-size: 23px"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-            </li>
-          </ul>
         </div>
       </div>
+      
+      <!-- Enlaces útiles -->
+      <div>
+        <h3 class="text-sm font-semibold text-white tracking-wider uppercase">Enlaces</h3>
+        <ul class="mt-4 space-y-2">
+          <li><a href="/" class="text-gray-400 hover:text-white">Inicio</a></li>
+          <li><a href="/projects" class="text-gray-400 hover:text-white">Proyectos</a></li>
+          <li><a href="/about" class="text-gray-400 hover:text-white">Sobre mí</a></li>
+          <li><a href="/contact" class="text-gray-400 hover:text-white">Contacto</a></li>
+        </ul>
+      </div>
+      
+      <!-- Contacto -->
+      <div>
+        <h3 class="text-sm font-semibold text-white tracking-wider uppercase">Contacto</h3>
+        <ul class="mt-4 space-y-2">
+          <li class="flex items-center space-x-3">
+            <i class="fas fa-map-marker-alt text-gray-500"></i>
+            <span>Chiclayo, Perú</span>
+          </li>
+          <li class="flex items-center space-x-3">
+            <i class="fas fa-envelope text-gray-500"></i>
+            <a href="mailto:becerrajohan6@gmail.com" class="hover:text-white">becerrajohan6@gmail.com</a>
+          </li>
+          <li class="flex items-center space-x-3">
+            <i class="fas fa-phone text-gray-500"></i>
+            <a href="tel:+51998113374" class="hover:text-white">+51 998 113 374</a>
+          </li>
+        </ul>
+        
+        <!-- Redes sociales -->
+        <div class="mt-6 flex space-x-4">
+          <a href="https://github.com/Bjohan23" target="_blank" class="text-gray-400 hover:text-white">
+            <i class="fab fa-github text-xl"></i>
+          </a>
+          <a href="#" target="_blank" class="text-gray-400 hover:text-white">
+            <i class="fab fa-linkedin-in text-xl"></i>
+          </a>
+          <a href="#" target="_blank" class="text-gray-400 hover:text-white">
+            <i class="fab fa-twitter text-xl"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mt-12 pt-8 border-t border-gray-700">
+      <p class="text-center text-gray-400 text-sm">
+        &copy; <%= new Date().getFullYear() %> Johan Becerra. Todos los derechos reservados.
+      </p>
     </div>
   </div>
 </footer>

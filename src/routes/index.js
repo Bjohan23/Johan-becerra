@@ -1,9 +1,10 @@
 import { Router } from "express";
 const router = Router();
-router.get("/", (req, res) => res.render("index", { title: "Inicio" })); // renderizamos la plantilla
-router.get("/about", (req, res) => res.render("about", { title: "Sobre mí" })); // renderizamos la plantilla
-router.get("/contact", (req, res) =>
-  res.render("contact", { title: "Pagina de contacto" })
-); // renderizamos la plantilla
+
+// Rutas principales
+router.get("/", (req, res) => res.render("index", { title: "Inicio" }));
+router.get("/about", (req, res) => res.render("about", { title: "Sobre mí" }));
+router.get("/contact", (req, res) => res.render("contact", { title: "Contacto" }));
+router.get("/projects", (req, res) => res.render("projects", { title: "Mis Proyectos" }));
 
 export default router;

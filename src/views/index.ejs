@@ -1,39 +1,159 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= title %></title>
-    <%- include('partials/head.ejs')%>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-5QX96V46EZ");
-    </script>
-  </head>
-  <body>
-    <%- include('partials/navigation.ejs')%>
-    <!-- mein contenido  -->
-    <header
-      class="container vh-100 d-flex justify-content-center align-items-center"
-    >
-      <div class="d-flex flex-column justify-content-center align-items-center">
-        <img src="/img/perfil.jpg" alt="" class="w-50 logo" />
-        <h1 class="display-1 my-5 text-uppercase fw-boold">Johan</h1>
-        <a href="/about" class="btn btn-primary text-uppercase fw-bold w-25">
-          Sobre mí
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= title %></title>
+  <%- include('partials/head.ejs')%>
+</head>
+<body class="bg-gray-900 text-white">
+  <%- include('partials/navigation.ejs')%>
+  
+  <!-- Hero Section -->
+  <div class="relative pt-16">
+    <!-- Fondo con gradiente y efecto -->
+    <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+      <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAJPHBhdGggZD0iTTU0LjAyIDIyLjUgTDIyLjUgNTQuMDIgTDUuOTggMzcuNSBMMzcuNSA1Ljk4IiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiIHN0cm9rZS13aWR0aD0iMC41IiBmaWxsPSJub25lIiAvPgo8L3N2Zz4=')]"></div>
+    </div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 py-32 sm:px-6 lg:px-8 min-h-screen flex items-center">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <!-- Contenido -->
+        <div data-aos="fade-right" data-aos-duration="1000">
+          <span class="px-3 py-1 text-sm font-medium bg-blue-500/10 text-blue-400 rounded-full">Desarrollador Backend</span>
+          <h1 class="mt-4 text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+            Hola, soy <span class="bg-gradient-to-r from-blue-500 to-green-400 bg-clip-text text-transparent">Johan</span>
+          </h1>
+          <p class="mt-6 text-xl text-gray-300 max-w-2xl">
+            Estudiante de Ingeniería de Sistemas y desarrollador backend apasionado por crear soluciones tecnológicas.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="/projects" class="px-6 py-3 text-base font-medium rounded-lg bg-blue-600 hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20">
+              Ver proyectos
+            </a>
+            <a href="/contact" class="px-6 py-3 text-base font-medium rounded-lg border border-gray-700 hover:border-gray-600 hover:bg-gray-800 transition-all">
+              Contactame
+            </a>
+          </div>
+          
+          <!-- Estadísticas -->
+          <div class="mt-12 grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-3">
+            <div>
+              <p class="text-3xl font-bold text-white">2+</p>
+              <p class="text-sm text-gray-400">Años de experiencia</p>
+            </div>
+            <div>
+              <p class="text-3xl font-bold text-white">10+</p>
+              <p class="text-sm text-gray-400">Proyectos completados</p>
+            </div>
+            <div>
+              <p class="text-3xl font-bold text-white">3+</p>
+              <p class="text-sm text-gray-400">Tecnologías dominadas</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Imagen -->
+        <div class="flex justify-center" data-aos="fade-left" data-aos-duration="1000">
+          <div class="relative">
+            <!-- Círculo decorativo -->
+            <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-500 to-green-400 blur-3xl opacity-20 animate-pulse"></div>
+            <!-- Imagen -->
+            <img src="/img/perfil.jpg" alt="Johan Becerra" class="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-gray-800">
+            <!-- Tecnologías flotantes -->
+            <div class="absolute -top-4 -right-4 bg-gray-800 p-3 rounded-full shadow-lg">
+              <i class="fab fa-node-js text-green-500 text-2xl"></i>
+            </div>
+            <div class="absolute top-1/2 -right-8 bg-gray-800 p-3 rounded-full shadow-lg">
+              <i class="fab fa-react text-blue-400 text-2xl"></i>
+            </div>
+            <div class="absolute bottom-0 -right-4 bg-gray-800 p-3 rounded-full shadow-lg">
+              <i class="fab fa-js text-yellow-500 text-2xl"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Tecnologías -->
+  <section class="py-20 bg-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center" data-aos="fade-up">
+        <h2 class="text-3xl font-bold">Tecnologías que uso</h2>
+        <p class="mt-4 text-gray-400">Herramientas y lenguajes con los que trabajo diariamente</p>
+      </div>
+      
+      <div class="mt-12 flex justify-center flex-wrap gap-8" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-20 h-20 bg-gray-700 rounded-xl flex items-center justify-center text-3xl shadow-xl hover:-translate-y-1 transition-transform">
+          <i class="fab fa-node text-green-500"></i>
+        </div>
+        <div class="w-20 h-20 bg-gray-700 rounded-xl flex items-center justify-center text-3xl shadow-xl hover:-translate-y-1 transition-transform">
+          <i class="fab fa-js text-yellow-400"></i>
+        </div>
+        <div class="w-20 h-20 bg-gray-700 rounded-xl flex items-center justify-center text-3xl shadow-xl hover:-translate-y-1 transition-transform">
+          <i class="fab fa-html5 text-orange-500"></i>
+        </div>
+        <div class="w-20 h-20 bg-gray-700 rounded-xl flex items-center justify-center text-3xl shadow-xl hover:-translate-y-1 transition-transform">
+          <i class="fab fa-css3-alt text-blue-500"></i>
+        </div>
+        <div class="w-20 h-20 bg-gray-700 rounded-xl flex items-center justify-center text-3xl shadow-xl hover:-translate-y-1 transition-transform">
+          <i class="fab fa-react text-blue-400"></i>
+        </div>
+        <div class="w-20 h-20 bg-gray-700 rounded-xl flex items-center justify-center text-3xl shadow-xl hover:-translate-y-1 transition-transform">
+          <i class="fas fa-database text-purple-500"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Proyectos destacados (vista previa) -->
+  <section class="py-20 bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center" data-aos="fade-up">
+        <h2 class="text-3xl font-bold">Proyectos destacados</h2>
+        <p class="mt-4 text-gray-400">Una muestra de mi trabajo reciente</p>
+      </div>
+      
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Proyecto 1 -->
+        <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl hover:-translate-y-2 transition-transform" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://via.placeholder.com/600x300" alt="Proyecto 1" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold">Aplicación Node.js</h3>
+            <p class="mt-2 text-gray-400">Web personal desarrollada con Node.js, Express y EJS</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-blue-900/50 text-blue-400 text-xs rounded-full">Node.js</span>
+              <span class="px-2 py-1 bg-green-900/50 text-green-400 text-xs rounded-full">Express</span>
+              <span class="px-2 py-1 bg-purple-900/50 text-purple-400 text-xs rounded-full">EJS</span>
+            </div>
+            <div class="mt-6 flex justify-between">
+              <a href="#" class="text-blue-400 hover:text-blue-300 font-medium">Ver demo →</a>
+              <a href="#" class="text-gray-400 hover:text-gray-300"><i class="fab fa-github"></i> Código</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Proyecto 2 (puedes duplicar y modificar) -->
+        <!-- ... -->
+        
+        <!-- Ver más proyectos -->
+        <a href="/projects" class="flex flex-col justify-center items-center bg-gray-800/50 border border-gray-700 rounded-xl p-8 text-center hover:bg-gray-800 transition-colors" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-arrow-right text-blue-400 text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold">Ver todos los proyectos</h3>
+          <p class="mt-2 text-gray-400">Explora mi portafolio completo</p>
         </a>
       </div>
-    </header>
-    <%- include('partials/footer.ejs')%>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-5QX96V46EZ"
-    ></script>
-  </body>
+    </div>
+  </section>
+  
+  <%- include('partials/footer.ejs')%>
+  
+  <script>
+    // Inicializar AOS
+    AOS.init();
+  </script>
+</body>
 </html>
