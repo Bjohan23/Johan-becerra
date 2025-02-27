@@ -31,16 +31,19 @@ Portfolio web personal desarrollado con Node.js, Express y EJS, con un diseño m
 
 <div align="center">
   <h3>Página de Inicio</h3>
-  <img src="public/img/inicio.png" alt="Página de Inicio" width="700">
+  <img src="https://johan-becerra23.vercel.app/img/inicio.png" alt="Página de Inicio" width="700">
+  <img src="https://johan-becerra23.vercel.app/img/tecnologias.png" alt="Página de Inicio" width="700">
   
   <h3>Proyectos</h3>
-  <img src="public/img/proyectos.png" alt="Página de Proyectos" width="700">
+  <img src="https://johan-becerra23.vercel.app/img/mis_proyectos.png" alt="Página de Proyectos" width="700">
+  <img src="https://johan-becerra23.vercel.app/img/proyectos.png" alt="Página de Proyectos" width="700">
   
   <h3>Sobre Mí</h3>
-  <img src="public/img/sobre_mi.png" alt="Página Sobre Mí" width="700">
+  <img src="https://johan-becerra23.vercel.app/img/sobre_mi.png" alt="Página Sobre Mí" width="700">
+  <img src="https://johan-becerra23.vercel.app/img/mis_habilidades.png" alt="Página Sobre Mí" width="700">
   
   <h3>Contacto</h3>
-  <img src="public/img/contacto.png" alt="Página de Contacto" width="700">
+  <img src="https://johan-becerra23.vercel.app/img/contacto.png" alt="Página de Contacto" width="700">
 </div>
 
 ## 🔧 Instalación y Uso
