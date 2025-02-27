@@ -31,16 +31,16 @@ Portfolio web personal desarrollado con Node.js, Express y EJS, con un diseño m
 
 <div align="center">
   <h3>Página de Inicio</h3>
-  <img src="[URL_DE_LA_IMAGEN_HOME]" alt="Página de Inicio" width="700">
+  <img src="public/img/inicio.png" alt="Página de Inicio" width="700">
   
   <h3>Proyectos</h3>
-  <img src="[URL_DE_LA_IMAGEN_PROYECTOS]" alt="Página de Proyectos" width="700">
+  <img src="public/img/proyectos.png" alt="Página de Proyectos" width="700">
   
   <h3>Sobre Mí</h3>
-  <img src="[URL_DE_LA_IMAGEN_SOBRE_MI]" alt="Página Sobre Mí" width="700">
+  <img src="public/img/sobre_mi.png" alt="Página Sobre Mí" width="700">
   
   <h3>Contacto</h3>
-  <img src="[URL_DE_LA_IMAGEN_CONTACTO]" alt="Página de Contacto" width="700">
+  <img src="public/img/contacto.png" alt="Página de Contacto" width="700">
 </div>
 
 ## 🔧 Instalación y Uso
