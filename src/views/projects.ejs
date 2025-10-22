@@ -1,142 +1,387 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Proyectos - Johan Becerra</title>
   <%- include('partials/head.ejs')%>
 </head>
-<body class="bg-gray-900 text-white">
+<body class="bg-white dark:bg-dark-950 text-gray-900 dark:text-white">
   <%- include('partials/navigation.ejs')%>
-  
+
   <div class="pt-16">
-    <!-- Header -->
-    <div class="bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-green-500/10">
-      <div class="max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8 text-center">
-        <h1 class="text-4xl font-bold" data-aos="fade-up">Mis Proyectos</h1>
-        <p class="mt-4 text-xl text-gray-300 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-          Una colección de mis trabajos y experimentos en desarrollo de software
+    <!-- Hero Header -->
+    <section class="relative py-20 overflow-hidden bg-gradient-to-br from-white via-primary-50/30 to-secondary-50/30 dark:from-dark-950 dark:via-primary-950/20 dark:to-secondary-950/20">
+      <!-- Background decoration -->
+      <div class="absolute inset-0 bg-pattern opacity-40"></div>
+      <div class="absolute top-10 right-10 w-72 h-72 bg-primary-500/20 dark:bg-primary-500/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 left-10 w-96 h-96 bg-secondary-500/20 dark:bg-secondary-500/10 rounded-full blur-3xl"></div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="badge" data-aos="fade-up">Portafolio</span>
+        <h1 class="mt-6 text-5xl md:text-6xl font-bold" data-aos="fade-up" data-aos-delay="100">
+          <span class="gradient-text">Mis Proyectos</span>
+        </h1>
+        <p class="mt-6 text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+          Explora mi colección de proyectos, desde aplicaciones web completas hasta APIs robustas y experimentos innovadores
         </p>
+
+        <!-- Stats -->
+        <div class="mt-12 flex flex-wrap justify-center gap-8" data-aos="fade-up" data-aos-delay="300">
+          <div class="text-center">
+            <div class="stat-number">10+</div>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Proyectos Completados</p>
+          </div>
+          <div class="text-center">
+            <div class="stat-number">6+</div>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Tecnologías Usadas</p>
+          </div>
+          <div class="text-center">
+            <div class="stat-number">100%</div>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Open Source</p>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
     
-    <!-- Filtros (opcional) -->
-    <div class="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
-      <div class="flex flex-wrap justify-center gap-4" data-aos="fade-up">
-        <button class="px-4 py-2 rounded-full bg-blue-500 text-white">Todos</button>
-        <button class="px-4 py-2 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors">Backend</button>
-        <button class="px-4 py-2 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors">Frontend</button>
+    <!-- Filters Section -->
+    <section class="py-12 bg-gray-50 dark:bg-dark-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-wrap justify-center gap-3" data-aos="fade-up">
+          <button class="px-6 py-2.5 rounded-xl font-medium bg-gradient-to-r from-primary-500 to-secondary-500 text-white shadow-lg hover:shadow-xl transition-all hover:scale-105 active">
+            Todos
+          </button>
+          <button class="px-6 py-2.5 rounded-xl font-medium bg-white dark:bg-dark-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-dark-700 hover:border-primary-500 dark:hover:border-primary-400 transition-all hover:scale-105">
+            Backend
+          </button>
+          <button class="px-6 py-2.5 rounded-xl font-medium bg-white dark:bg-dark-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-dark-700 hover:border-primary-500 dark:hover:border-primary-400 transition-all hover:scale-105">
+            Frontend
+          </button>
+          <button class="px-6 py-2.5 rounded-xl font-medium bg-white dark:bg-dark-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-dark-700 hover:border-primary-500 dark:hover:border-primary-400 transition-all hover:scale-105">
+            Full Stack
+          </button>
+        </div>
       </div>
-    </div>
+    </section>
     
-    <!-- Proyectos -->
-    <div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Proyecto 1 -->
-        <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform transition-all hover:-translate-y-2 duration-300" data-aos="fade-up" data-aos-delay="100">
-          <img src="https://via.placeholder.com/600x300" alt="Proyecto 1" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-bold">Aplicación Node.js</h3>
-            <p class="mt-2 text-gray-400">Web personal desarrollada con Node.js, Express y EJS como motor de plantillas.</p>
+    <!-- Main Projects Grid -->
+    <section class="py-20 bg-white dark:bg-dark-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <!-- Project Card 1 -->
+          <div class="project-card group" data-aos="fade-up" data-aos-delay="100">
+            <div class="relative overflow-hidden">
+              <img src="https://via.placeholder.com/600x400" alt="Portfolio Personal" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500">
+              <div class="absolute top-4 right-4">
+                <span class="px-3 py-1 bg-primary-500 text-white text-xs font-semibold rounded-full">Featured</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                Portfolio Personal
+              </h3>
+              <p class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                Aplicación web moderna desarrollada con Node.js, Express y EJS con diseño responsive y modo oscuro
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="badge">Node.js</span>
+                <span class="badge">Express</span>
+                <span class="badge">EJS</span>
+                <span class="badge">Tailwind</span>
+              </div>
+              <div class="mt-6 flex items-center justify-between">
+                <a href="#" class="inline-flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium text-sm group/link">
+                  Ver Demo
+                  <svg class="ml-1 w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+                <a href="https://github.com/Bjohan23" target="_blank" class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 transition-colors">
+                  <i class="fab fa-github text-xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 2 -->
+          <div class="project-card group" data-aos="fade-up" data-aos-delay="200">
+            <div class="relative overflow-hidden">
+              <img src="https://via.placeholder.com/600x400" alt="Sistema de Inventario" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                Sistema de Inventario
+              </h3>
+              <p class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                Aplicación completa para gestión de inventarios con autenticación y operaciones CRUD
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="badge">Node.js</span>
+                <span class="badge">MongoDB</span>
+                <span class="badge">Express</span>
+                <span class="badge">JWT</span>
+              </div>
+              <div class="mt-6 flex items-center justify-between">
+                <a href="#" class="inline-flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium text-sm group/link">
+                  Ver Demo
+                  <svg class="ml-1 w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+                <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 transition-colors">
+                  <i class="fab fa-github text-xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 3 -->
+          <div class="project-card group" data-aos="fade-up" data-aos-delay="300">
+            <div class="relative overflow-hidden">
+              <img src="https://via.placeholder.com/600x400" alt="API RESTful" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                API RESTful
+              </h3>
+              <p class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                API robusta para gestión de usuarios y productos con documentación completa
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="badge">Node.js</span>
+                <span class="badge">Express</span>
+                <span class="badge">MySQL</span>
+                <span class="badge">Swagger</span>
+              </div>
+              <div class="mt-6 flex items-center justify-between">
+                <a href="#" class="inline-flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium text-sm group/link">
+                  Ver Demo
+                  <svg class="ml-1 w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+                <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 transition-colors">
+                  <i class="fab fa-github text-xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add 3 more projects for a fuller portfolio -->
+          <div class="project-card group" data-aos="fade-up" data-aos-delay="100">
+            <div class="relative overflow-hidden">
+              <img src="https://via.placeholder.com/600x400" alt="E-commerce Backend" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                E-commerce Backend
+              </h3>
+              <p class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                Backend completo para tienda online con carrito, pagos y gestión de pedidos
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="badge">Node.js</span>
+                <span class="badge">PostgreSQL</span>
+                <span class="badge">Stripe</span>
+              </div>
+              <div class="mt-6 flex items-center justify-between">
+                <a href="#" class="inline-flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium text-sm group/link">
+                  Ver Demo
+                  <svg class="ml-1 w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+                <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 transition-colors">
+                  <i class="fab fa-github text-xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card group" data-aos="fade-up" data-aos-delay="200">
+            <div class="relative overflow-hidden">
+              <img src="https://via.placeholder.com/600x400" alt="Chat en Tiempo Real" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                Chat en Tiempo Real
+              </h3>
+              <p class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                Aplicación de mensajería instantánea con WebSockets y salas de chat
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="badge">Node.js</span>
+                <span class="badge">Socket.io</span>
+                <span class="badge">React</span>
+              </div>
+              <div class="mt-6 flex items-center justify-between">
+                <a href="#" class="inline-flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium text-sm group/link">
+                  Ver Demo
+                  <svg class="ml-1 w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+                <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 transition-colors">
+                  <i class="fab fa-github text-xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card group" data-aos="fade-up" data-aos-delay="300">
+            <div class="relative overflow-hidden">
+              <img src="https://via.placeholder.com/600x400" alt="Task Manager" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                Gestor de Tareas
+              </h3>
+              <p class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                Organizador de tareas con categorías, prioridades y recordatorios
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="badge">Node.js</span>
+                <span class="badge">MongoDB</span>
+                <span class="badge">Vue.js</span>
+              </div>
+              <div class="mt-6 flex items-center justify-between">
+                <a href="#" class="inline-flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium text-sm group/link">
+                  Ver Demo
+                  <svg class="ml-1 w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+                <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 transition-colors">
+                  <i class="fab fa-github text-xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    
+    <!-- Other Projects Section -->
+    <section class="py-20 bg-gray-50 dark:bg-dark-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="section-title">Proyectos Adicionales</h2>
+          <p class="mt-4 text-gray-600 dark:text-gray-400">
+            Experimentos y proyectos pequeños que demuestran habilidades específicas
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Mini Project 1 -->
+          <div class="modern-card p-6 hover:border-primary-500 dark:hover:border-primary-400 transition-all cursor-pointer" data-aos="zoom-in" data-aos-delay="100">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-xl flex items-center justify-center">
+                <i class="fas fa-calculator text-xl text-primary-600 dark:text-primary-400"></i>
+              </div>
+              <a href="#" class="text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                <i class="fab fa-github text-xl"></i>
+              </a>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 dark:text-white">Calculadora JavaScript</h3>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+              Calculadora interactiva con operaciones básicas y diseño responsive
+            </p>
             <div class="mt-4 flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-blue-900/50 text-blue-400 text-xs rounded-full">Node.js</span>
-              <span class="px-2 py-1 bg-green-900/50 text-green-400 text-xs rounded-full">Express</span>
-              <span class="px-2 py-1 bg-purple-900/50 text-purple-400 text-xs rounded-full">EJS</span>
-            </div>
-            <div class="mt-6 flex justify-between">
-              <a href="#" class="text-blue-400 hover:text-blue-300 font-medium">Demo</a>
-              <a href="#" class="text-gray-400 hover:text-gray-300">Código</a>
+              <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-600 dark:text-gray-400 rounded-md">JavaScript</span>
+              <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-600 dark:text-gray-400 rounded-md">CSS</span>
             </div>
           </div>
-        </div>
-        
-        <!-- Proyecto 2 -->
-        <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform transition-all hover:-translate-y-2 duration-300" data-aos="fade-up" data-aos-delay="200">
-          <img src="https://via.placeholder.com/600x300" alt="Proyecto 2" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-bold">Sistema de Inventario</h3>
-            <p class="mt-2 text-gray-400">Aplicación para gestión de inventarios con Node.js y MongoDB.</p>
+
+          <!-- Mini Project 2 -->
+          <div class="modern-card p-6 hover:border-primary-500 dark:hover:border-primary-400 transition-all cursor-pointer" data-aos="zoom-in" data-aos-delay="200">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-12 h-12 bg-secondary-100 dark:bg-secondary-900/30 rounded-xl flex items-center justify-center">
+                <i class="fas fa-pager text-xl text-secondary-600 dark:text-secondary-400"></i>
+              </div>
+              <a href="#" class="text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                <i class="fab fa-github text-xl"></i>
+              </a>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 dark:text-white">Landing Page</h3>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+              Página de aterrizaje moderna con animaciones y formulario de contacto
+            </p>
             <div class="mt-4 flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-blue-900/50 text-blue-400 text-xs rounded-full">Node.js</span>
-              <span class="px-2 py-1 bg-yellow-900/50 text-yellow-400 text-xs rounded-full">MongoDB</span>
-              <span class="px-2 py-1 bg-red-900/50 text-red-400 text-xs rounded-full">Express</span>
-            </div>
-            <div class="mt-6 flex justify-between">
-              <a href="#" class="text-blue-400 hover:text-blue-300 font-medium">Demo</a>
-              <a href="#" class="text-gray-400 hover:text-gray-300">Código</a>
+              <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-600 dark:text-gray-400 rounded-md">HTML</span>
+              <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-600 dark:text-gray-400 rounded-md">Tailwind</span>
             </div>
           </div>
-        </div>
-        
-        <!-- Proyecto 3 -->
-        <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform transition-all hover:-translate-y-2 duration-300" data-aos="fade-up" data-aos-delay="300">
-          <img src="https://via.placeholder.com/600x300" alt="Proyecto 3" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-bold">API RESTful</h3>
-            <p class="mt-2 text-gray-400">Servicio de API RESTful para gestión de datos de usuarios y productos.</p>
+
+          <!-- Mini Project 3 -->
+          <div class="modern-card p-6 hover:border-primary-500 dark:hover:border-primary-400 transition-all cursor-pointer" data-aos="zoom-in" data-aos-delay="300">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-12 h-12 bg-accent-emerald/20 rounded-xl flex items-center justify-center">
+                <i class="fas fa-tasks text-xl text-accent-emerald"></i>
+              </div>
+              <a href="#" class="text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                <i class="fab fa-github text-xl"></i>
+              </a>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 dark:text-white">To-Do List</h3>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+              Lista de tareas con Local Storage y filtros por estado
+            </p>
             <div class="mt-4 flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-blue-900/50 text-blue-400 text-xs rounded-full">Node.js</span>
-              <span class="px-2 py-1 bg-indigo-900/50 text-indigo-400 text-xs rounded-full">Express</span>
-              <span class="px-2 py-1 bg-green-900/50 text-green-400 text-xs rounded-full">MySQL</span>
-            </div>
-            <div class="mt-6 flex justify-between">
-              <a href="#" class="text-blue-400 hover:text-blue-300 font-medium">Demo</a>
-              <a href="#" class="text-gray-400 hover:text-gray-300">Código</a>
+              <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-600 dark:text-gray-400 rounded-md">JavaScript</span>
+              <span class="text-xs px-2 py-1 bg-gray-100 dark:bg-dark-700 text-gray-600 dark:text-gray-400 rounded-md">LocalStorage</span>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    
-    <!-- Sección "Otros proyectos" -->
-    <div class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 bg-gray-800/30 rounded-xl my-12" data-aos="fade-up">
-      <div class="text-center mb-10">
-        <h2 class="text-3xl font-bold">Otros proyectos</h2>
-        <p class="mt-4 text-gray-400">Proyectos más pequeños en los que he trabajado</p>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-white dark:bg-dark-950 relative overflow-hidden">
+      <!-- Background decoration -->
+      <div class="absolute inset-0">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary-500/10 rounded-full blur-3xl"></div>
       </div>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Mini proyecto 1 -->
-        <div class="bg-gray-800 p-6 rounded-xl transition-all hover:bg-gray-700" data-aos="zoom-in" data-aos-delay="100">
-          <h3 class="text-lg font-bold">Calculadora JavaScript</h3>
-          <p class="mt-2 text-gray-400 text-sm">Una calculadora simple construida con HTML, CSS y JavaScript</p>
-          <div class="mt-4 flex justify-end">
-            <a href="#" class="text-sm text-blue-400 hover:underline">Ver detalles →</a>
-          </div>
+
+      <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+        <span class="badge">¿Tienes un proyecto en mente?</span>
+        <h2 class="mt-6 text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
+          Trabajemos <span class="gradient-text">juntos</span>
+        </h2>
+        <p class="mt-6 text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          Estoy disponible para proyectos freelance, colaboraciones o posiciones full-time.
+          ¡Hablemos sobre tu próximo proyecto!
+        </p>
+
+        <div class="mt-10 flex flex-wrap justify-center gap-4">
+          <a href="/contact" class="btn-glow group">
+            <span class="relative z-10 flex items-center">
+              Iniciar Conversación
+              <svg class="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </span>
+          </a>
+          <a href="/about" class="btn-outline">
+            Conocer más sobre mí
+          </a>
         </div>
-        
-        <!-- Mini proyecto 2 -->
-        <div class="bg-gray-800 p-6 rounded-xl transition-all hover:bg-gray-700" data-aos="zoom-in" data-aos-delay="200">
-          <h3 class="text-lg font-bold">Landing Page</h3>
-          <p class="mt-2 text-gray-400 text-sm">Una página de destino para un producto ficticio</p>
-          <div class="mt-4 flex justify-end">
-            <a href="#" class="text-sm text-blue-400 hover:underline">Ver detalles →</a>
-          </div>
-        </div>
-        
-        <!-- Mini proyecto 3 -->
-        <div class="bg-gray-800 p-6 rounded-xl transition-all hover:bg-gray-700" data-aos="zoom-in" data-aos-delay="300">
-          <h3 class="text-lg font-bold">To-Do List</h3>
-          <p class="mt-2 text-gray-400 text-sm">Una aplicación de lista de tareas con almacenamiento local</p>
-          <div class="mt-4 flex justify-end">
-            <a href="#" class="text-sm text-blue-400 hover:underline">Ver detalles →</a>
-          </div>
+
+        <!-- Contact info -->
+        <div class="mt-16 flex flex-wrap justify-center gap-8 text-sm">
+          <a href="mailto:becerrajohan6@gmail.com" class="flex items-center text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+            <i class="fas fa-envelope mr-2"></i>
+            becerrajohan6@gmail.com
+          </a>
+          <a href="https://github.com/Bjohan23" target="_blank" class="flex items-center text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+            <i class="fab fa-github mr-2"></i>
+            GitHub
+          </a>
         </div>
       </div>
-    </div>
-    
-    <!-- Sección CTA -->
-    <div class="max-w-7xl mx-auto px-4 py-20 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
-      <h2 class="text-3xl font-bold">¿Interesado en trabajar juntos?</h2>
-      <p class="mt-4 text-xl text-gray-400 max-w-2xl mx-auto">
-        Estoy abierto a nuevas oportunidades y colaboraciones en proyectos interesantes
-      </p>
-      <div class="mt-8">
-        <a href="/contact" class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors">
-          Contáctame
-        </a>
-      </div>
-    </div>
+    </section>
   </div>
   
   <%- include('partials/footer.ejs')%>

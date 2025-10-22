@@ -1,150 +1,307 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title><%= title %></title>
   <%- include('partials/head.ejs')%>
 </head>
-<body class="bg-gray-900 text-white">
+<body class="bg-white dark:bg-dark-950 text-gray-900 dark:text-white">
   <%- include('partials/navigation.ejs')%>
-  
-  <!-- Hero Section -->
-  <div class="relative pt-16">
-    <!-- Fondo con gradiente y efecto -->
-    <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-      <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAJPHBhdGggZD0iTTU0LjAyIDIyLjUgTDIyLjUgNTQuMDIgTDUuOTggMzcuNSBMMzcuNSA1Ljk4IiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiIHN0cm9rZS13aWR0aD0iMC41IiBmaWxsPSJub25lIiAvPgo8L3N2Zz4=')]"></div>
+
+  <!-- Hero Section - Ultra Modern 2025 -->
+  <section class="relative pt-16 min-h-screen flex items-center overflow-hidden">
+    <!-- Animated Background -->
+    <div class="absolute inset-0 bg-pattern">
+      <div class="absolute inset-0 bg-gradient-to-br from-white via-primary-50/30 to-secondary-50/30 dark:from-dark-950 dark:via-primary-950/20 dark:to-secondary-950/20"></div>
+
+      <!-- Floating gradient orbs -->
+      <div class="absolute top-20 left-10 w-72 h-72 bg-primary-500/20 dark:bg-primary-500/10 rounded-full blur-3xl animate-float"></div>
+      <div class="absolute bottom-20 right-10 w-96 h-96 bg-secondary-500/20 dark:bg-secondary-500/10 rounded-full blur-3xl animate-float" style="animation-delay: 2s;"></div>
+      <div class="absolute top-1/2 left-1/2 w-64 h-64 bg-accent-cyan/20 dark:bg-accent-cyan/10 rounded-full blur-3xl animate-pulse-slow"></div>
     </div>
-    
-    <div class="relative max-w-7xl mx-auto px-4 py-32 sm:px-6 lg:px-8 min-h-screen flex items-center">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        <!-- Contenido -->
-        <div data-aos="fade-right" data-aos-duration="1000">
-          <span class="px-3 py-1 text-sm font-medium bg-blue-500/10 text-blue-400 rounded-full">Desarrollador Backend</span>
-          <h1 class="mt-4 text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-            Hola, soy <span class="bg-gradient-to-r from-blue-500 to-green-400 bg-clip-text text-transparent">Johan</span>
-          </h1>
-          <p class="mt-6 text-xl text-gray-300 max-w-2xl">
-            Estudiante de Ingeniería de Sistemas y desarrollador backend apasionado por crear soluciones tecnológicas.
+
+    <div class="relative max-w-7xl mx-auto px-4 py-20 sm:px-6 lg:px-8 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+        <!-- Content Column -->
+        <div class="space-y-8" data-aos="fade-right" data-aos-duration="1000">
+          <!-- Badge -->
+          <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white/80 dark:bg-dark-800/80 backdrop-blur-sm border border-gray-200 dark:border-dark-700 shadow-lg">
+            <span class="relative flex h-3 w-3">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 bg-primary-500"></span>
+            </span>
+            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Disponible para proyectos</span>
+          </div>
+
+          <!-- Main Heading -->
+          <div class="space-y-4">
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+              <span class="block text-gray-900 dark:text-white">Hola, soy</span>
+              <span class="block gradient-text mt-2">Johan Becerra</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 max-w-2xl">
+              Desarrollador <span class="font-semibold text-primary-600 dark:text-primary-400">Backend</span> &
+              Estudiante de <span class="font-semibold text-secondary-600 dark:text-secondary-400">Ingeniería de Sistemas</span>
+            </p>
+          </div>
+
+          <p class="text-lg text-gray-600 dark:text-gray-400 max-w-xl leading-relaxed">
+            Apasionado por crear soluciones tecnológicas innovadoras que transforman ideas en realidad. Especializado en Node.js y desarrollo backend escalable.
           </p>
-          <div class="mt-8 flex flex-wrap gap-4">
-            <a href="/projects" class="px-6 py-3 text-base font-medium rounded-lg bg-blue-600 hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20">
-              Ver proyectos
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-wrap gap-4">
+            <a href="/projects" class="btn-glow group">
+              <span class="relative z-10 flex items-center">
+                Ver Proyectos
+                <svg class="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </span>
             </a>
-            <a href="/contact" class="px-6 py-3 text-base font-medium rounded-lg border border-gray-700 hover:border-gray-600 hover:bg-gray-800 transition-all">
-              Contactame
+            <a href="/contact" class="btn-outline group">
+              Contactarme
+              <svg class="inline-block ml-2 w-5 h-5 transition-transform group-hover:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
             </a>
           </div>
-          
-          <!-- Estadísticas -->
-          <div class="mt-12 grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-3">
-            <div>
-              <p class="text-3xl font-bold text-white">2+</p>
-              <p class="text-sm text-gray-400">Años de experiencia</p>
+
+          <!-- Stats -->
+          <div class="grid grid-cols-3 gap-6 pt-8">
+            <div class="text-center lg:text-left">
+              <div class="stat-number">2+</div>
+              <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Años de experiencia</p>
             </div>
-            <div>
-              <p class="text-3xl font-bold text-white">10+</p>
-              <p class="text-sm text-gray-400">Proyectos completados</p>
+            <div class="text-center lg:text-left">
+              <div class="stat-number">10+</div>
+              <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Proyectos completados</p>
             </div>
-            <div>
-              <p class="text-3xl font-bold text-white">3+</p>
-              <p class="text-sm text-gray-400">Tecnologías dominadas</p>
+            <div class="text-center lg:text-left">
+              <div class="stat-number">6+</div>
+              <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Tecnologías</p>
             </div>
           </div>
         </div>
-        
-        <!-- Imagen -->
-        <div class="flex justify-center" data-aos="fade-left" data-aos-duration="1000">
+
+        <!-- Image Column -->
+        <div class="flex justify-center lg:justify-end" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
           <div class="relative">
-            <!-- Círculo decorativo -->
-            <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-500 to-green-400 blur-3xl opacity-20 animate-pulse"></div>
-            <!-- Imagen -->
-            <img src="/img/foto_de_perfil.jpeg" alt="Johan Becerra" class="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-gray-800">
-            <!-- Tecnologías flotantes -->
-            <div class="absolute -top-4 -right-4 bg-gray-800 p-3 rounded-full shadow-lg">
-              <i class="fab fa-node-js text-green-500 text-2xl"></i>
+            <!-- Glow effect -->
+            <div class="profile-glow">
+              <img src="/img/foto_de_perfil.jpeg" alt="Johan Becerra"
+                   class="relative w-72 h-72 md:w-96 md:h-96 rounded-3xl object-cover shadow-2xl
+                          ring-4 ring-white dark:ring-dark-800 hover:scale-105 transition-transform duration-500">
             </div>
-            <div class="absolute top-1/2 -right-8 bg-gray-800 p-3 rounded-full shadow-lg">
-              <i class="fab fa-react text-blue-400 text-2xl"></i>
+
+            <!-- Floating Tech Icons -->
+            <div class="absolute -top-6 -right-6 glass-dark p-4 rounded-2xl shadow-xl animate-float">
+              <i class="fab fa-node-js text-4xl text-green-500"></i>
             </div>
-            <div class="absolute bottom-0 -right-4 bg-gray-800 p-3 rounded-full shadow-lg">
-              <i class="fab fa-js text-yellow-500 text-2xl"></i>
+            <div class="absolute top-1/2 -left-8 glass-dark p-4 rounded-2xl shadow-xl animate-float" style="animation-delay: 1s;">
+              <i class="fab fa-react text-4xl text-blue-400"></i>
             </div>
+            <div class="absolute -bottom-6 right-1/4 glass-dark p-4 rounded-2xl shadow-xl animate-float" style="animation-delay: 2s;">
+              <i class="fab fa-js text-4xl text-yellow-500"></i>
+            </div>
+
+            <!-- Decorative Elements -->
+            <div class="absolute -z-10 top-10 -right-10 w-40 h-40 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full blur-2xl opacity-30 animate-pulse-slow"></div>
+            <div class="absolute -z-10 -bottom-10 -left-10 w-40 h-40 bg-gradient-to-br from-accent-cyan to-accent-pink rounded-full blur-2xl opacity-30 animate-pulse-slow" style="animation-delay: 1.5s;"></div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <svg class="w-6 h-6 text-gray-400 dark:text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
+    </div>
+  </section>
   
-  <!-- Tecnologías -->
-  <section class="py-20 bg-gray-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center" data-aos="fade-up">
-        <h2 class="text-3xl font-bold">Tecnologías que uso</h2>
-        <p class="mt-4 text-gray-400">Herramientas y lenguajes con los que trabajo diariamente</p>
+  <!-- Technologies Section -->
+  <section class="py-24 bg-gray-50 dark:bg-dark-900 relative overflow-hidden">
+    <!-- Background decoration -->
+    <div class="absolute inset-0 opacity-40">
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary-500/10 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="badge">Stack Tecnológico</span>
+        <h2 class="section-title mt-6">Tecnologías que domino</h2>
+        <p class="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          Herramientas y frameworks con los que trabajo para crear soluciones robustas y escalables
+        </p>
       </div>
-      
-      <div class="mt-12 flex justify-center flex-wrap gap-8" data-aos="fade-up" data-aos-delay="100">
-        <div class="w-20 h-20 bg-gray-700 rounded-xl flex items-center justify-center text-3xl shadow-xl hover:-translate-y-1 transition-transform">
-          <i class="fab fa-node text-green-500"></i>
+
+      <!-- Tech Grid -->
+      <div class="flex flex-wrap justify-center gap-6 md:gap-8" data-aos="fade-up" data-aos-delay="100">
+        <div class="tech-icon group">
+          <i class="fab fa-node-js text-4xl md:text-5xl text-green-500 group-hover:scale-110 transition-transform"></i>
         </div>
-        <div class="w-20 h-20 bg-gray-700 rounded-xl flex items-center justify-center text-3xl shadow-xl hover:-translate-y-1 transition-transform">
-          <i class="fab fa-js text-yellow-400"></i>
+        <div class="tech-icon group">
+          <i class="fab fa-js text-4xl md:text-5xl text-yellow-400 group-hover:scale-110 transition-transform"></i>
         </div>
-        <div class="w-20 h-20 bg-gray-700 rounded-xl flex items-center justify-center text-3xl shadow-xl hover:-translate-y-1 transition-transform">
-          <i class="fab fa-html5 text-orange-500"></i>
+        <div class="tech-icon group">
+          <i class="fab fa-html5 text-4xl md:text-5xl text-orange-500 group-hover:scale-110 transition-transform"></i>
         </div>
-        <div class="w-20 h-20 bg-gray-700 rounded-xl flex items-center justify-center text-3xl shadow-xl hover:-translate-y-1 transition-transform">
-          <i class="fab fa-css3-alt text-blue-500"></i>
+        <div class="tech-icon group">
+          <i class="fab fa-css3-alt text-4xl md:text-5xl text-blue-500 group-hover:scale-110 transition-transform"></i>
         </div>
-        <div class="w-20 h-20 bg-gray-700 rounded-xl flex items-center justify-center text-3xl shadow-xl hover:-translate-y-1 transition-transform">
-          <i class="fab fa-react text-blue-400"></i>
+        <div class="tech-icon group">
+          <i class="fab fa-react text-4xl md:text-5xl text-blue-400 group-hover:scale-110 transition-transform"></i>
         </div>
-        <div class="w-20 h-20 bg-gray-700 rounded-xl flex items-center justify-center text-3xl shadow-xl hover:-translate-y-1 transition-transform">
-          <i class="fas fa-database text-purple-500"></i>
+        <div class="tech-icon group">
+          <i class="fas fa-database text-4xl md:text-5xl text-purple-500 group-hover:scale-110 transition-transform"></i>
+        </div>
+      </div>
+
+      <!-- Additional Tech Info -->
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="200">
+        <div class="modern-card p-6 text-center">
+          <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-server text-2xl text-primary-600 dark:text-primary-400"></i>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Backend Development</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400">Node.js, Express, APIs RESTful</p>
+        </div>
+
+        <div class="modern-card p-6 text-center">
+          <div class="w-12 h-12 bg-secondary-100 dark:bg-secondary-900/30 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-database text-2xl text-secondary-600 dark:text-secondary-400"></i>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Bases de Datos</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400">MySQL, MongoDB, PostgreSQL</p>
+        </div>
+
+        <div class="modern-card p-6 text-center">
+          <div class="w-12 h-12 bg-accent-emerald/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-code text-2xl text-accent-emerald"></i>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Frontend Basics</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400">HTML, CSS, JavaScript, React</p>
         </div>
       </div>
     </div>
   </section>
   
-  <!-- Proyectos destacados (vista previa) -->
-  <section class="py-20 bg-gray-900">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center" data-aos="fade-up">
-        <h2 class="text-3xl font-bold">Proyectos destacados</h2>
-        <p class="mt-4 text-gray-400">Una muestra de mi trabajo reciente</p>
+  <!-- Featured Projects Section -->
+  <section class="py-24 bg-white dark:bg-dark-950 relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 bg-pattern opacity-50"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="badge">Portafolio</span>
+        <h2 class="section-title mt-6">Proyectos Destacados</h2>
+        <p class="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          Explora algunos de mis proyectos más recientes y significativos
+        </p>
       </div>
-      
-      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Proyecto 1 -->
-        <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl hover:-translate-y-2 transition-transform" data-aos="fade-up" data-aos-delay="100">
-          <img src="https://via.placeholder.com/600x300" alt="Proyecto 1" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-bold">Aplicación Node.js</h3>
-            <p class="mt-2 text-gray-400">Web personal desarrollada con Node.js, Express y EJS</p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-blue-900/50 text-blue-400 text-xs rounded-full">Node.js</span>
-              <span class="px-2 py-1 bg-green-900/50 text-green-400 text-xs rounded-full">Express</span>
-              <span class="px-2 py-1 bg-purple-900/50 text-purple-400 text-xs rounded-full">EJS</span>
+
+      <!-- Projects Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project Card 1 -->
+        <div class="project-card group" data-aos="fade-up" data-aos-delay="100">
+          <div class="relative overflow-hidden">
+            <img src="https://via.placeholder.com/600x400" alt="Proyecto 1"
+                 class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute top-4 right-4">
+              <span class="px-3 py-1 bg-primary-500 text-white text-xs font-semibold rounded-full">Featured</span>
             </div>
-            <div class="mt-6 flex justify-between">
-              <a href="#" class="text-blue-400 hover:text-blue-300 font-medium">Ver demo →</a>
-              <a href="#" class="text-gray-400 hover:text-gray-300"><i class="fab fa-github"></i> Código</a>
+          </div>
+
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+              Portfolio Personal
+            </h3>
+            <p class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+              Aplicación web moderna desarrollada con Node.js, Express y EJS con diseño responsive
+            </p>
+
+            <!-- Tech Stack Tags -->
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="badge">Node.js</span>
+              <span class="badge">Express</span>
+              <span class="badge">EJS</span>
+              <span class="badge">Tailwind</span>
+            </div>
+
+            <!-- Actions -->
+            <div class="mt-6 flex items-center justify-between">
+              <a href="#" class="inline-flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium text-sm group/link">
+                Ver Demo
+                <svg class="ml-1 w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+              <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 transition-colors">
+                <i class="fab fa-github text-xl"></i>
+              </a>
             </div>
           </div>
         </div>
-        
-        <!-- Proyecto 2 (puedes duplicar y modificar) -->
-        <!-- ... -->
-        
-        <!-- Ver más proyectos -->
-        <a href="/projects" class="flex flex-col justify-center items-center bg-gray-800/50 border border-gray-700 rounded-xl p-8 text-center hover:bg-gray-800 transition-colors" data-aos="fade-up" data-aos-delay="300">
-          <div class="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mb-4">
-            <i class="fas fa-arrow-right text-blue-400 text-xl"></i>
+
+        <!-- Project Card 2 -->
+        <div class="project-card group" data-aos="fade-up" data-aos-delay="200">
+          <div class="relative overflow-hidden">
+            <img src="https://via.placeholder.com/600x400" alt="Proyecto 2"
+                 class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500">
           </div>
-          <h3 class="text-xl font-bold">Ver todos los proyectos</h3>
-          <p class="mt-2 text-gray-400">Explora mi portafolio completo</p>
-        </a>
+
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+              API RESTful
+            </h3>
+            <p class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+              Sistema backend robusto con autenticación JWT y operaciones CRUD completas
+            </p>
+
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="badge">Node.js</span>
+              <span class="badge">Express</span>
+              <span class="badge">MongoDB</span>
+              <span class="badge">JWT</span>
+            </div>
+
+            <div class="mt-6 flex items-center justify-between">
+              <a href="#" class="inline-flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium text-sm group/link">
+                Ver Demo
+                <svg class="ml-1 w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+              <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 transition-colors">
+                <i class="fab fa-github text-xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- View All Projects Card -->
+        <div class="modern-card group p-8 flex flex-col items-center justify-center text-center cursor-pointer hover:border-primary-500 dark:hover:border-primary-400 transition-all"
+             data-aos="fade-up" data-aos-delay="300">
+          <div class="w-20 h-20 rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Ver Todos los Proyectos</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-6">
+            Explora mi portafolio completo con más de 10 proyectos
+          </p>
+          <a href="/projects" class="btn-glow">
+            <span class="relative z-10">Explorar Portafolio</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>

@@ -1,189 +1,223 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sobre mí - Johan Becerra</title>
   <%- include('partials/head.ejs')%>
 </head>
-<body class="bg-gray-900 text-white">
+<body class="bg-white dark:bg-dark-950 text-gray-900 dark:text-white">
   <%- include('partials/navigation.ejs')%>
-  
+
   <div class="pt-16">
-    <!-- Header -->
-    <div class="bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-green-500/10">
-      <div class="max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <!-- Hero Section -->
+    <section class="relative py-20 overflow-hidden bg-gradient-to-br from-white via-primary-50/30 to-secondary-50/30 dark:from-dark-950 dark:via-primary-950/20 dark:to-secondary-950/20">
+      <div class="absolute inset-0 bg-pattern opacity-40"></div>
+      <div class="absolute top-10 right-10 w-72 h-72 bg-primary-500/20 dark:bg-primary-500/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 left-10 w-96 h-96 bg-secondary-500/20 dark:bg-secondary-500/10 rounded-full blur-3xl"></div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <!-- Content -->
           <div data-aos="fade-right">
-            <h1 class="text-4xl font-bold">Sobre mí</h1>
-            <p class="mt-4 text-xl text-gray-300">
-              Conoce mi historia, habilidades y pasiones
+            <span class="badge">Conóceme</span>
+            <h1 class="mt-6 text-5xl md:text-6xl font-bold">
+              Sobre <span class="gradient-text">mí</span>
+            </h1>
+            <p class="mt-6 text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
+              Soy Johan Becerra, tengo <span class="font-bold text-primary-600 dark:text-primary-400"><%= edad %> años</span> y soy un apasionado estudiante de
+              Ingeniería de Sistemas con enfoque en desarrollo backend.
             </p>
+            <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">
+              Mi objetivo es crear soluciones tecnológicas que no solo resuelvan problemas,
+              sino que también mejoren la vida de las personas.
+            </p>
+
+            <!-- Quick Stats -->
+            <div class="mt-8 grid grid-cols-2 gap-4">
+              <div class="modern-card p-4 text-center">
+                <div class="stat-number text-3xl">2+</div>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Años codificando</p>
+              </div>
+              <div class="modern-card p-4 text-center">
+                <div class="stat-number text-3xl">6+</div>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Tecnologías</p>
+              </div>
+            </div>
           </div>
-          <div class="flex justify-center" data-aos="fade-left">
-            <img src="/img/foto_de_perfil.jpeg" alt="Johan Becerra" class="w-64 h-64 rounded-full object-cover border-4 border-gray-800">
+
+          <!-- Profile Image -->
+          <div class="flex justify-center lg:justify-end" data-aos="fade-left" data-aos-delay="200">
+            <div class="profile-glow">
+              <img src="/img/foto_de_perfil.jpeg" alt="Johan Becerra"
+                   class="w-80 h-80 md:w-96 md:h-96 rounded-3xl object-cover shadow-2xl ring-4 ring-white dark:ring-dark-800">
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    
-    <!-- Bio -->
-    <section class="max-w-5xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-      <div class="prose prose-lg prose-invert max-w-none" data-aos="fade-up">
-        <p class="lead text-xl">
-          Soy un entusiasta estudiante de Ingeniería de Sistemas de <%= edad %> años de
-          edad, apasionado por continuar creciendo en el campo de la
-          programación y la tecnología.
-        </p>
-        
-        <p>
-          Constantemente busco nuevos desafíos que me permitan poner a prueba mis habilidades para resolver problemas de
-          manera creativa a través del código. Me especializo en
-          <strong>Backend</strong>, pero estoy ávido por expandir mis
-          conocimientos y dominar nuevas herramientas.
-        </p>
-        
-        <p>
-          Disfruto analizar un problema, diseñar una solución eficiente y luego implementarla
-          limpiamente en código bien documentado. Aunque gran parte de mi tiempo
-          lo dedico al estudio y a proyectos personales de programación, también
-          soy un ávido deportista. Practicar fútbol y baloncesto me ha enseñado
-          el espíritu de equipo y me ayuda a mantener una mente ágil.
-        </p>
-        
-        <p>
-          En mis ratos libres también disfruto jugar videojuegos, lo cual me permite
-          relajarme y mantenerme al día con las últimas tendencias en tecnología
-          y diseño. Como estudiante de ingeniería, no solo busco culminar
-          exitosamente mi carrera, sino también adquirir todas las habilidades
-          blandas necesarias para tener una carrera gratificante.
-        </p>
-        
-        <p>
-          Me considero una persona proactiva, con facilidad para el trabajo en equipo y una
-          sólida ética de trabajo. Estoy seguro que mi pasión por la
-          programación, mi permanente sed de conocimiento y mis habilidades
-          interpersonales me permitirán aportar valor como desarrollador en
-          cualquier equipo de trabajo.
-        </p>
       </div>
     </section>
-    
-    <!-- Habilidades -->
-    <section class="bg-gray-800 py-16">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12" data-aos="fade-up">
-          <h2 class="text-3xl font-bold">Mis Habilidades</h2>
-          <p class="mt-4 text-gray-400">Tecnologías y herramientas que manejo</p>
+
+    <!-- Bio Section -->
+    <section class="py-20 bg-white dark:bg-dark-950">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-lg dark:prose-invert max-w-none" data-aos="fade-up">
+          <p class="text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
+            Soy un entusiasta estudiante de Ingeniería de Sistemas apasionado por continuar creciendo
+            en el campo de la programación y la tecnología. Constantemente busco nuevos desafíos que me
+            permitan poner a prueba mis habilidades para resolver problemas de manera creativa a través del código.
+          </p>
+
+          <p class="text-lg text-gray-600 dark:text-gray-400 mt-6">
+            Me especializo en <strong class="text-gray-900 dark:text-white">Backend Development</strong>,
+            pero estoy ávido por expandir mis conocimientos y dominar nuevas herramientas. Disfruto analizar
+            un problema, diseñar una solución eficiente y luego implementarla limpiamente en código bien documentado.
+          </p>
+
+          <p class="text-lg text-gray-600 dark:text-gray-400 mt-6">
+            Aunque gran parte de mi tiempo lo dedico al estudio y a proyectos personales de programación,
+            también soy un ávido deportista. Practicar <strong class="text-gray-900 dark:text-white">fútbol y baloncesto</strong> me
+            ha enseñado el espíritu de equipo y me ayuda a mantener una mente ágil. En mis ratos libres
+            también disfruto jugar videojuegos, lo cual me permite relajarme y mantenerme al día con las
+            últimas tendencias en tecnología y diseño.
+          </p>
+
+          <p class="text-lg text-gray-600 dark:text-gray-400 mt-6">
+            Me considero una persona <strong class="text-gray-900 dark:text-white">proactiva</strong>,
+            con facilidad para el trabajo en equipo y una sólida ética de trabajo. Estoy seguro que mi
+            pasión por la programación, mi permanente sed de conocimiento y mis habilidades interpersonales
+            me permitirán aportar valor como desarrollador en cualquier equipo de trabajo.
+          </p>
         </div>
-        
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-20 bg-gray-50 dark:bg-dark-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span class="badge">Habilidades Técnicas</span>
+          <h2 class="section-title mt-6">Mi Stack Tecnológico</h2>
+          <p class="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            Tecnologías y herramientas con las que trabajo diariamente
+          </p>
+        </div>
+
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Backend -->
-          <div class="bg-gray-900 rounded-xl p-6 shadow-xl" data-aos="fade-up" data-aos-delay="100">
-            <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4">
-              <i class="fas fa-server text-blue-400 text-xl"></i>
+          <!-- Backend Card -->
+          <div class="modern-card p-8" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+              <i class="fas fa-server text-3xl text-white"></i>
             </div>
-            <h3 class="text-xl font-bold">Backend</h3>
-            <div class="mt-4 space-y-3">
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Backend</h3>
+
+            <div class="space-y-4">
               <div>
-                <div class="flex justify-between mb-1">
-                  <span>Node.js</span>
-                  <span>85%</span>
+                <div class="flex justify-between mb-2">
+                  <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Node.js</span>
+                  <span class="text-sm font-semibold text-primary-600 dark:text-primary-400">85%</span>
                 </div>
-                <div class="w-full bg-gray-700 rounded-full h-2">
-                  <div class="bg-blue-500 h-2 rounded-full" style="width: 85%"></div>
+                <div class="skill-progress">
+                  <div class="skill-progress-fill" style="width: 85%"></div>
                 </div>
               </div>
+
               <div>
-                <div class="flex justify-between mb-1">
-                  <span>Express</span>
-                  <span>80%</span>
+                <div class="flex justify-between mb-2">
+                  <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Express</span>
+                  <span class="text-sm font-semibold text-primary-600 dark:text-primary-400">80%</span>
                 </div>
-                <div class="w-full bg-gray-700 rounded-full h-2">
-                  <div class="bg-blue-500 h-2 rounded-full" style="width: 80%"></div>
+                <div class="skill-progress">
+                  <div class="skill-progress-fill" style="width: 80%"></div>
                 </div>
               </div>
+
               <div>
-                <div class="flex justify-between mb-1">
-                  <span>PHP</span>
-                  <span>65%</span>
+                <div class="flex justify-between mb-2">
+                  <span class="text-sm font-medium text-gray-700 dark:text-gray-300">PHP</span>
+                  <span class="text-sm font-semibold text-primary-600 dark:text-primary-400">65%</span>
                 </div>
-                <div class="w-full bg-gray-700 rounded-full h-2">
-                  <div class="bg-blue-500 h-2 rounded-full" style="width: 65%"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Frontend -->
-          <div class="bg-gray-900 rounded-xl p-6 shadow-xl" data-aos="fade-up" data-aos-delay="200">
-            <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-4">
-              <i class="fas fa-code text-green-400 text-xl"></i>
-            </div>
-            <h3 class="text-xl font-bold">Frontend</h3>
-            <div class="mt-4 space-y-3">
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span>HTML/CSS</span>
-                  <span>90%</span>
-                </div>
-                <div class="w-full bg-gray-700 rounded-full h-2">
-                  <div class="bg-green-500 h-2 rounded-full" style="width: 90%"></div>
-                </div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span>JavaScript</span>
-                  <span>75%</span>
-                </div>
-                <div class="w-full bg-gray-700 rounded-full h-2">
-                  <div class="bg-green-500 h-2 rounded-full" style="width: 75%"></div>
-                </div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span>React</span>
-                  <span>60%</span>
-                </div>
-                <div class="w-full bg-gray-700 rounded-full h-2">
-                  <div class="bg-green-500 h-2 rounded-full" style="width: 60%"></div>
+                <div class="skill-progress">
+                  <div class="skill-progress-fill" style="width: 65%"></div>
                 </div>
               </div>
             </div>
           </div>
-          
-          <!-- Bases de datos -->
-          <div class="bg-gray-900 rounded-xl p-6 shadow-xl" data-aos="fade-up" data-aos-delay="300">
-            <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
-              <i class="fas fa-database text-purple-400 text-xl"></i>
+
+          <!-- Frontend Card -->
+          <div class="modern-card p-8" data-aos="fade-up" data-aos-delay="200">
+            <div class="w-16 h-16 bg-gradient-to-br from-secondary-500 to-secondary-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+              <i class="fas fa-code text-3xl text-white"></i>
             </div>
-            <h3 class="text-xl font-bold">Bases de datos</h3>
-            <div class="mt-4 space-y-3">
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Frontend</h3>
+
+            <div class="space-y-4">
               <div>
-                <div class="flex justify-between mb-1">
-                  <span>MySQL</span>
-                  <span>80%</span>
+                <div class="flex justify-between mb-2">
+                  <span class="text-sm font-medium text-gray-700 dark:text-gray-300">HTML/CSS</span>
+                  <span class="text-sm font-semibold text-secondary-600 dark:text-secondary-400">90%</span>
                 </div>
-                <div class="w-full bg-gray-700 rounded-full h-2">
-                  <div class="bg-purple-500 h-2 rounded-full" style="width: 80%"></div>
+                <div class="skill-progress">
+                  <div class="skill-progress-fill" style="width: 90%"></div>
                 </div>
               </div>
+
               <div>
-                <div class="flex justify-between mb-1">
-                  <span>MongoDB</span>
-                  <span>70%</span>
+                <div class="flex justify-between mb-2">
+                  <span class="text-sm font-medium text-gray-700 dark:text-gray-300">JavaScript</span>
+                  <span class="text-sm font-semibold text-secondary-600 dark:text-secondary-400">75%</span>
                 </div>
-                <div class="w-full bg-gray-700 rounded-full h-2">
-                  <div class="bg-purple-500 h-2 rounded-full" style="width: 70%"></div>
+                <div class="skill-progress">
+                  <div class="skill-progress-fill" style="width: 75%"></div>
                 </div>
               </div>
+
               <div>
-                <div class="flex justify-between mb-1">
-                  <span>SQL</span>
-                  <span>75%</span>
+                <div class="flex justify-between mb-2">
+                  <span class="text-sm font-medium text-gray-700 dark:text-gray-300">React</span>
+                  <span class="text-sm font-semibold text-secondary-600 dark:text-secondary-400">60%</span>
                 </div>
-                <div class="w-full bg-gray-700 rounded-full h-2">
-                  <div class="bg-purple-500 h-2 rounded-full" style="width: 75%"></div>
+                <div class="skill-progress">
+                  <div class="skill-progress-fill" style="width: 60%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Database Card -->
+          <div class="modern-card p-8" data-aos="fade-up" data-aos-delay="300">
+            <div class="w-16 h-16 bg-gradient-to-br from-accent-emerald to-green-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+              <i class="fas fa-database text-3xl text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Bases de Datos</h3>
+
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="text-sm font-medium text-gray-700 dark:text-gray-300">MySQL</span>
+                  <span class="text-sm font-semibold text-accent-emerald">80%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-progress-fill" style="width: 80%"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="text-sm font-medium text-gray-700 dark:text-gray-300">MongoDB</span>
+                  <span class="text-sm font-semibold text-accent-emerald">70%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-progress-fill" style="width: 70%"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="text-sm font-medium text-gray-700 dark:text-gray-300">PostgreSQL</span>
+                  <span class="text-sm font-semibold text-accent-emerald">75%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-progress-fill" style="width: 75%"></div>
                 </div>
               </div>
             </div>
@@ -191,44 +225,60 @@
         </div>
       </div>
     </section>
-    
+
     <!-- WakaTime Stats -->
-    <section class="py-16">
+    <section class="py-20 bg-white dark:bg-dark-950">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12" data-aos="fade-up">
-          <h2 class="text-3xl font-bold">Mis Estadísticas de Código</h2>
-          <p class="mt-4 text-gray-400">Un vistazo a mi actividad de programación</p>
+          <span class="badge">Actividad de Código</span>
+          <h2 class="section-title mt-6">Mis Estadísticas</h2>
+          <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">
+            Un vistazo a mi actividad de programación reciente
+          </p>
         </div>
-        
+
         <div class="flex justify-center" data-aos="fade-up" data-aos-delay="100">
-          <img src="https://github-readme-stats.vercel.app/api/wakatime?username=bjohan23&theme=dark" alt="WakaTime Stats" class="rounded-xl shadow-xl w-full max-w-3xl">
+          <div class="modern-card p-4 inline-block">
+            <img src="https://github-readme-stats.vercel.app/api/wakatime?username=bjohan23&theme=dark&layout=compact&hide_border=true&bg_color=1e293b"
+                 alt="WakaTime Stats"
+                 class="rounded-xl">
+          </div>
         </div>
       </div>
     </section>
-    
-    <!-- CV Button -->
-    <section class="py-16 bg-gray-800 text-center">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div data-aos="fade-up">
-          <h2 class="text-3xl font-bold">¿Interesado en trabajar juntos?</h2>
-          <p class="mt-4 text-gray-400 max-w-2xl mx-auto">Descarga mi CV para obtener más información sobre mi experiencia y habilidades, o contáctame directamente.</p>
-          <div class="mt-8 flex justify-center gap-4">
-            <a href="#" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 transition-colors rounded-lg font-medium flex items-center">
-              <i class="fas fa-download mr-2"></i> Descargar CV
-            </a>
-            <a href="/contact" class="px-6 py-3 bg-gray-700 hover:bg-gray-600 transition-colors rounded-lg font-medium">
-              Contactame
-            </a>
-          </div>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-gradient-to-br from-primary-500 via-secondary-500 to-accent-cyan relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10 bg-pattern"></div>
+
+      <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+          ¿Listo para trabajar juntos?
+        </h2>
+        <p class="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+          Descarga mi CV para conocer más sobre mi experiencia, o contáctame directamente para discutir tu próximo proyecto.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="#" class="px-8 py-4 bg-white text-primary-600 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all hover:scale-105 inline-flex items-center">
+            <i class="fas fa-download mr-2"></i>
+            Descargar CV
+          </a>
+          <a href="/contact" class="px-8 py-4 bg-white/10 backdrop-blur-sm text-white border-2 border-white rounded-xl font-semibold hover:bg-white/20 transition-all">
+            Contactarme
+          </a>
         </div>
       </div>
     </section>
   </div>
-  
+
   <%- include('partials/footer.ejs')%>
-  
+
   <script>
-    AOS.init();
+    AOS.init({
+      duration: 800,
+      once: true
+    });
   </script>
 </body>
 </html>
